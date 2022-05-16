@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/Profile';
+import Image from './profile/Image';
 
 function App() {
+  const user ={
+    fullName:'Ihssen Guessmi',
+    bio:'I’m a web developer. I spend my whole day, practically every day, experimenting with HTML, CSS, and JavaScript. I’m curious, and I enjoy work that challenges me to learn something new and stretch in a different direction. I do my best to stay on top of changes in the state of the art so that I can meet challenges with tools well suited to the job at hand. The list of projects I follow on GitHub will give you a good idea of the types of tools I’d prefer to be using',
+    profession:'Full stack developer'
+  }
+  const handleName =()=>
+  {alert(JSON.stringify(user, null, 4))};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile user={user} handleName={handleName} />
+      <Image/>
     </div>
   );
 }
